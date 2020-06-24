@@ -1,0 +1,2 @@
+Name,Allow Benchmarking,Async Reports,Cron Benchmark,Cron Send Snapshot,Cron Snapshot Job,Opt In,Regression Formula
+AppSettings,yes,yes,0 0 0 5 * ?,0 0 0 * * ?,0 0 0 1 * ?,yes,yes

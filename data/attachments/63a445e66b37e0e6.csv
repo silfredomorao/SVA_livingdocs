@@ -1,0 +1,3 @@
+Amount,Field,Operator,Value,Continue
+Annual Revenue,Type,contains,New Business,no
+Annual Revenue,Won,equals,True,no

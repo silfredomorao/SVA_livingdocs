@@ -1,0 +1,122 @@
+{
+  "uid" : "9370cbcced400e96",
+  "name" : "Sad path invalid opportunity filter",
+  "historyId" : "2944d2c9490017b30fd0b9fa598fa3cd",
+  "time" : {
+    "start" : 1593034523760,
+    "stop" : 1593034624082,
+    "duration" : 100322
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given I successfully login in Salesforce using \"Admin\" credentials",
+      "time" : {
+        "start" : 1593034526328,
+        "stop" : 1593034547496,
+        "duration" : 21168
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And I try to create a new segment with name: \"Segment Automation\"",
+      "time" : {
+        "start" : 1593034547497,
+        "stop" : 1593034570419,
+        "duration" : 22922
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then I create a new Opportunity filter setup according this table",
+      "time" : {
+        "start" : 1593034570420,
+        "stop" : 1593034623875,
+        "duration" : 53455
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "9b3c4b2d992f827b",
+        "name" : ".table",
+        "source" : "9b3c4b2d992f827b.csv",
+        "type" : "text/csv",
+        "size" : 74
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Then I cant advance and \"Opportunity warning\" msg is present",
+      "time" : {
+        "start" : 1593034623875,
+        "stop" : 1593034623914,
+        "duration" : 39
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "tag",
+    "value" : "ui"
+  }, {
+    "name" : "feature",
+    "value" : "Create a New Segment"
+  }, {
+    "name" : "framework",
+    "value" : "behave"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "ui" ]
+  },
+  "source" : "9370cbcced400e96.json",
+  "parameterValues" : [ ]
+}

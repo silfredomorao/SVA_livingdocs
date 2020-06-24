@@ -1,0 +1,151 @@
+[ {
+  "uid" : "1b63343ead93f7f2",
+  "name" : "Fresh Start Initial setup wizard, happy path reading both agreements and benchmark agreement",
+  "time" : {
+    "start" : 1593034769847,
+    "stop" : 1593034769849,
+    "duration" : 2
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "20a0f62d18cf66c8",
+  "name" : "Fresh Start Initial setup wizard, sad path no reading legal agreements",
+  "time" : {
+    "start" : 1593034769839,
+    "stop" : 1593034769841,
+    "duration" : 2
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "9370cbcced400e96",
+  "name" : "Sad path invalid opportunity filter",
+  "time" : {
+    "start" : 1593034523760,
+    "stop" : 1593034624082,
+    "duration" : 100322
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "73f78f96da92d830",
+  "name" : "Fresh Start Initial setup wizard, sad path only reading research agreements",
+  "time" : {
+    "start" : 1593034769842,
+    "stop" : 1593034769843,
+    "duration" : 1
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "e82e38c1b34e2027",
+  "name" : "Happy path creating a new filters",
+  "time" : {
+    "start" : 1593034198432,
+    "stop" : 1593034260323,
+    "duration" : 61891
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "ae3fcbf70b4e461c",
+  "name" : "Fresh Start Initial setup wizard, happy path reading both agreements and not benchmark agreement",
+  "time" : {
+    "start" : 1593034769846,
+    "stop" : 1593034769847,
+    "duration" : 1
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "ef8776b9968e72ee",
+  "name" : "To be defined editing or deleting filter sales users",
+  "time" : {
+    "start" : 1593034769836,
+    "stop" : 1593034769838,
+    "duration" : 2
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "e4bd3f7badd7c293",
+  "name" : "Sad path no peer industry selected",
+  "time" : {
+    "start" : 1593034304623,
+    "stop" : 1593034461316,
+    "duration" : 156693
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "77ae65d5a5fc5276",
+  "name" : "Happy path, checking the custom settings",
+  "time" : {
+    "start" : 1593034769850,
+    "stop" : 1593034816173,
+    "duration" : 46323
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "588b0fc8dbecd03a",
+  "name" : "To be defined deleting filters",
+  "time" : {
+    "start" : 1593034769830,
+    "stop" : 1593034769833,
+    "duration" : 3
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "f96d7b2e9293803a",
+  "name" : "To be defined editing filters",
+  "time" : {
+    "start" : 1593034769834,
+    "stop" : 1593034769835,
+    "duration" : 1
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "5fb79eb599f909ce",
+  "name" : "Fresh Start Initial setup wizard, sad path only reading sales exhibits",
+  "time" : {
+    "start" : 1593034769844,
+    "stop" : 1593034769845,
+    "duration" : 1
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "73d20c4ef9798b41",
+  "name" : "Sad path invalid sales user filter",
+  "time" : {
+    "start" : 1593034624085,
+    "stop" : 1593034769829,
+    "duration" : 145744
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "60597f8615610338",
+  "name" : "New segment link, actually, this is not a sad path scenario to test New segment example link",
+  "time" : {
+    "start" : 1593034461319,
+    "stop" : 1593034523758,
+    "duration" : 62439
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7d6636bee149c4a3",
+  "name" : "Sad path segment with no name",
+  "time" : {
+    "start" : 1593034260326,
+    "stop" : 1593034304621,
+    "duration" : 44295
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

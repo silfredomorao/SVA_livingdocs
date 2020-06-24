@@ -1,0 +1,126 @@
+{
+  "uid" : "77ae65d5a5fc5276",
+  "name" : "Happy path, checking the custom settings",
+  "historyId" : "7f815be87e929317352ee6b68eb940ad",
+  "time" : {
+    "start" : 1593034769850,
+    "stop" : 1593034816173,
+    "duration" : 46323
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: '0 0 0 5 * ?' != '0 30 * * * ?'\n- 0 0 0 5 * ?\n+ 0 30 * * * ?\n\n",
+  "statusTrace" : "  File \"/usr/local/lib/python3.7/site-packages/behave/model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"/usr/local/lib/python3.7/site-packages/behave/matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"features/steps/custom_settings.py\", line 71, in step_impl\n    assert_equals(cron_benchmark, driver.find_element(*CustomSettingsPage.cron_benchmark_value).text)\n  File \"/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py\", line 1351, in deprecated_func\n    return original_func(*args, **kwargs)\n  File \"/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py\", line 852, in assertEqual\n    assertion_func(first, second, msg=msg)\n  File \"/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py\", line 1233, in assertMultiLineEqual\n    self.fail(self._formatMessage(msg, standardMsg))\n  File \"/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py\", line 693, in fail\n    raise self.failureException(msg)\n",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: '0 0 0 5 * ?' != '0 30 * * * ?'\n- 0 0 0 5 * ?\n+ 0 30 * * * ?\n\n",
+    "statusTrace" : "  File \"/usr/local/lib/python3.7/site-packages/behave/model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"/usr/local/lib/python3.7/site-packages/behave/matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"features/steps/custom_settings.py\", line 71, in step_impl\n    assert_equals(cron_benchmark, driver.find_element(*CustomSettingsPage.cron_benchmark_value).text)\n  File \"/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py\", line 1351, in deprecated_func\n    return original_func(*args, **kwargs)\n  File \"/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py\", line 852, in assertEqual\n    assertion_func(first, second, msg=msg)\n  File \"/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py\", line 1233, in assertMultiLineEqual\n    self.fail(self._formatMessage(msg, standardMsg))\n  File \"/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py\", line 693, in fail\n    raise self.failureException(msg)\n",
+    "steps" : [ {
+      "name" : "Given I successfully login in Salesforce using \"Admin\" credentials",
+      "time" : {
+        "start" : 1593034772562,
+        "stop" : 1593034792198,
+        "duration" : 19636
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And navigate into Custom Settings",
+      "time" : {
+        "start" : 1593034792198,
+        "stop" : 1593034808166,
+        "duration" : 15968
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then I validate verify the app configuration is according to this table",
+      "time" : {
+        "start" : 1593034808167,
+        "stop" : 1593034815717,
+        "duration" : 7550
+      },
+      "status" : "failed",
+      "statusMessage" : "AssertionError: '0 0 0 5 * ?' != '0 30 * * * ?'\n- 0 0 0 5 * ?\n+ 0 30 * * * ?\n\n",
+      "statusTrace" : "  File \"/usr/local/lib/python3.7/site-packages/behave/model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"/usr/local/lib/python3.7/site-packages/behave/matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"features/steps/custom_settings.py\", line 71, in step_impl\n    assert_equals(cron_benchmark, driver.find_element(*CustomSettingsPage.cron_benchmark_value).text)\n  File \"/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py\", line 1351, in deprecated_func\n    return original_func(*args, **kwargs)\n  File \"/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py\", line 852, in assertEqual\n    assertion_func(first, second, msg=msg)\n  File \"/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py\", line 1233, in assertMultiLineEqual\n    self.fail(self._formatMessage(msg, standardMsg))\n  File \"/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py\", line 693, in fail\n    raise self.failureException(msg)\n",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "61aa03a79dd8db3a",
+        "name" : ".table",
+        "source" : "61aa03a79dd8db3a.csv",
+        "type" : "text/csv",
+        "size" : 179
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "9d86d1e05c0a78b2",
+      "name" : "screenshot",
+      "source" : "9d86d1e05c0a78b2.png",
+      "type" : "image/png",
+      "size" : 135906
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "tag",
+    "value" : "smoke"
+  }, {
+    "name" : "tag",
+    "value" : "ui"
+  }, {
+    "name" : "feature",
+    "value" : "Custom settings"
+  }, {
+    "name" : "framework",
+    "value" : "behave"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ "ui", "smoke" ]
+  },
+  "source" : "77ae65d5a5fc5276.json",
+  "parameterValues" : [ ]
+}

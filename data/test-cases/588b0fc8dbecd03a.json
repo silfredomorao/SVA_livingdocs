@@ -1,0 +1,140 @@
+{
+  "uid" : "588b0fc8dbecd03a",
+  "name" : "To be defined deleting filters",
+  "historyId" : "dc77b7b7b8822b3d18ab26e04106e75f",
+  "time" : {
+    "start" : 1593034769830,
+    "stop" : 1593034769833,
+    "duration" : 3
+  },
+  "status" : "skipped",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "skipped",
+    "steps" : [ {
+      "name" : "Given I successfully login in Salesforce using \"Admin\" credentials",
+      "time" : {
+        "start" : 1593034769831,
+        "stop" : 1593034769831,
+        "duration" : 0
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And I try to create a new segment with name: \"Segment Automation\"",
+      "time" : {
+        "start" : 1593034769831,
+        "stop" : 1593034769831,
+        "duration" : 0
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then I create a new Opportunity filter setup according this table",
+      "time" : {
+        "start" : 1593034769831,
+        "stop" : 1593034769832,
+        "duration" : 1
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "548df75534af9c87",
+        "name" : ".table",
+        "source" : "548df75534af9c87.csv",
+        "type" : "text/csv",
+        "size" : 115
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Then I delete the filter number",
+      "time" : {
+        "start" : 1593034769832,
+        "stop" : 1593034769833,
+        "duration" : 1
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "11189c7e61961b8d",
+        "name" : ".table",
+        "source" : "11189c7e61961b8d.csv",
+        "type" : "text/csv",
+        "size" : 21
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "And bla bla",
+      "time" : {
+        "start" : 1593034769833,
+        "stop" : 1593034769833,
+        "duration" : 0
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 5,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "feature",
+    "value" : "Create a New Segment"
+  }, {
+    "name" : "framework",
+    "value" : "behave"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "588b0fc8dbecd03a.json",
+  "parameterValues" : [ ]
+}
