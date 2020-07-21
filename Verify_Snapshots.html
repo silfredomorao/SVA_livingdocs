@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"[]>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Verify the snapshots after segment creation</title>
+    <link rel="stylesheet" href="css/master.css" type="text/css" />
+    <link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/scripts.js" type="text/javascript"></script>
+    <script type="text/javascript">
+$(document).ready(function() {
+  initializeToc();
+});
+</script>
+    <!-- We are using Font Awesome - http://fortawesome.github.com/Font-Awesome - licensed under CC BY 3.0 -->
+  </head>
+  <body>
+    <div id="container">
+      <div id="top" />
+      <div id="toc">
+        <p class="tocCollapser" title="Collapse Table of Content">«</p>
+        <ul class="features">
+          <li class="file" id="root">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="file">
+            <a href="Create_Segment.html">Create a New Segment</a>
+          </li>
+          <li class="file">
+            <a href="Settings.html">Custom settings</a>
+          </li>
+          <li class="file">
+            <a href="Delete_Segment.html">Delete segments test scenarios</a>
+          </li>
+          <li class="file">
+            <a href="Initial_Flow.html">Setup Wizard</a>
+          </li>
+          <li class="file">
+            <span class="current">Verify the snapshots after segment creation</span>
+          </li>
+        </ul>
+      </div>
+      <div id="feature">
+        <h1>Verify the snapshots after segment creation</h1>
+        <ul id="scenarios">
+          <li class="scenario">
+            <div class="scenario-heading">
+              <h2>Create a segment, with the intention of creating snapshots</h2>
+            </div>
+            <div class="steps">
+              <ul>
+                <li class="step">
+                  <span class="keyword">Given </span>I successfully login in Salesforce using "Admin" credentials</li>
+                <li class="step">
+                  <span class="keyword">And </span>I try to create a new segment with name: "SqID"</li>
+                <li class="step">
+                  <span class="keyword">Then </span>I create a new Opportunity filter setup according this table<div class="table_container"><table class="datatable"><thead><tr><th>Amount</th><th>Field</th><th>Operator</th><th>Value</th><th>Continue</th><th> </th></tr></thead><tbody><tr><td>Annual Revenue</td><td>Type</td><td>contains</td><td>New Business</td><td>yes</td></tr></tbody></table></div></li>
+                <li class="step">
+                  <span class="keyword">And </span>I create a new Sales filter setup according this table<div class="table_container"><table class="datatable"><thead><tr><th>Field</th><th>Operator</th><th>Value</th><th>Continue</th><th> </th></tr></thead><tbody><tr><td>Country</td><td>contains</td><td>US</td><td>yes</td></tr></tbody></table></div></li>
+                <li class="step">
+                  <span class="keyword">Then </span>I select the peer group filter "Banking"</li>
+              </ul>
+            </div>
+          </li>
+          <li class="scenario">
+            <div class="scenario-heading" id="happy-path-verify-snapshots">
+              <p class="tags">Tags: <span>@checksnapshots</span>, <span>@ui</span></p>
+              <h2>Happy path verify snapshots</h2>
+            </div>
+            <div class="steps">
+              <ul>
+                <li class="step">
+                  <span class="keyword">And </span>I wait 10 min or until the snapshotobject is created</li>
+                <li class="step">
+                  <span class="keyword">When </span>I navigate to the snapshot repository, looking in the filter for "all"</li>
+                <li class="step">
+                  <span class="keyword">Then </span>I verify that the snapshots have been created correctly</li>
+              </ul>
+            </div>
+            <a class="scenario-link" href="javascript:showImageLink('happy-path-verify-snapshots')" title="Copy scenario link to clipboard.">
+              <i class="icon-link"> </i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div id="footer">
+        <p>Test results generated for: Sales Value App, version 1</p>
+        <p>Generated on: 21 julio 2020 13:18:49</p>
+        <p>Produced by Pickles, version 2.20.1.0</p>
+      </div>
+    </div>
+  </body>
+</html>

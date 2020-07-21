@@ -1,14 +1,14 @@
 jsonPWrapper ({
   "Features": [
     {
-      "RelativeFolder": "features\\Create_Segment.feature",
+      "RelativeFolder": "Create_Segment.feature",
       "Feature": {
         "Name": "Create a New Segment",
         "Description": "All the steps involving segments creation, with scenarios of happy and sad paths",
         "FeatureElements": [
           {
-            "Name": "Happy path creating a new filters",
-            "Slug": "happy-path-creating-a-new-filters",
+            "Name": "Happy path creating a new segment",
+            "Slug": "happy-path-creating-a-new-segment",
             "Description": "",
             "Steps": [
               {
@@ -21,7 +21,7 @@ jsonPWrapper ({
               {
                 "Keyword": "And",
                 "NativeKeyword": "And ",
-                "Name": "I try to create a new segment with name: \"Segment Automation\"",
+                "Name": "I try to create a new segment with name: \"SqID\"",
                 "StepComments": [],
                 "AfterLastStepComments": []
               },
@@ -86,7 +86,9 @@ jsonPWrapper ({
               }
             ],
             "Tags": [
-              "@ui"
+              "@ui",
+              "@smoke",
+              "@newsegment"
             ],
             "Result": {
               "WasExecuted": false,
@@ -122,7 +124,8 @@ jsonPWrapper ({
               }
             ],
             "Tags": [
-              "@ui"
+              "@ui",
+              "@newsegment"
             ],
             "Result": {
               "WasExecuted": false,
@@ -213,7 +216,8 @@ jsonPWrapper ({
               }
             ],
             "Tags": [
-              "@ui"
+              "@ui",
+              "@newsegment"
             ],
             "Result": {
               "WasExecuted": false,
@@ -249,7 +253,8 @@ jsonPWrapper ({
               }
             ],
             "Tags": [
-              "@ui"
+              "@ui",
+              "@newsegment"
             ],
             "Result": {
               "WasExecuted": false,
@@ -310,7 +315,8 @@ jsonPWrapper ({
               }
             ],
             "Tags": [
-              "@ui"
+              "@ui",
+              "@newsegment"
             ],
             "Result": {
               "WasExecuted": false,
@@ -398,7 +404,8 @@ jsonPWrapper ({
               }
             ],
             "Tags": [
-              "@ui"
+              "@ui",
+              "@newsegment"
             ],
             "Result": {
               "WasExecuted": false,
@@ -704,7 +711,7 @@ jsonPWrapper ({
       }
     },
     {
-      "RelativeFolder": "features\\Settings.feature",
+      "RelativeFolder": "Settings.feature",
       "Feature": {
         "Name": "Custom settings",
         "Description": "All the custom settings test scenarios",
@@ -762,7 +769,8 @@ jsonPWrapper ({
             ],
             "Tags": [
               "@smoke",
-              "@ui"
+              "@ui",
+              "@customsettings"
             ],
             "Result": {
               "WasExecuted": false,
@@ -785,7 +793,131 @@ jsonPWrapper ({
       }
     },
     {
-      "RelativeFolder": "features\\Initial_Flow.feature",
+      "RelativeFolder": "Delete_Segment.feature",
+      "Feature": {
+        "Name": "Delete segments test scenarios",
+        "Description": "",
+        "FeatureElements": [
+          {
+            "Name": "Happy path delete segments",
+            "Slug": "happy-path-delete-segments",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "I verify the segment is present and I delete it",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [
+              "@delete_segments",
+              "@ui"
+            ],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false,
+              "WasProvided": false
+            }
+          }
+        ],
+        "Background": {
+          "Name": "Create a segment to be deleted",
+          "Description": "",
+          "Steps": [
+            {
+              "Keyword": "Given",
+              "NativeKeyword": "Given ",
+              "Name": "I successfully login in Salesforce using \"Admin\" credentials",
+              "StepComments": [],
+              "AfterLastStepComments": []
+            },
+            {
+              "Keyword": "And",
+              "NativeKeyword": "And ",
+              "Name": "I try to create a new segment with name: \"SqID\"",
+              "StepComments": [],
+              "AfterLastStepComments": []
+            },
+            {
+              "Keyword": "Then",
+              "NativeKeyword": "Then ",
+              "Name": "I create a new Opportunity filter setup according this table",
+              "TableArgument": {
+                "HeaderRow": [
+                  "Amount",
+                  "Field",
+                  "Operator",
+                  "Value",
+                  "Continue"
+                ],
+                "DataRows": [
+                  [
+                    "Annual Revenue",
+                    "Type",
+                    "contains",
+                    "New Business",
+                    "yes"
+                  ]
+                ]
+              },
+              "StepComments": [],
+              "AfterLastStepComments": []
+            },
+            {
+              "Keyword": "And",
+              "NativeKeyword": "And ",
+              "Name": "I create a new Sales filter setup according this table",
+              "TableArgument": {
+                "HeaderRow": [
+                  "Field",
+                  "Operator",
+                  "Value",
+                  "Continue"
+                ],
+                "DataRows": [
+                  [
+                    "Country",
+                    "contains",
+                    "US",
+                    "yes"
+                  ]
+                ]
+              },
+              "StepComments": [],
+              "AfterLastStepComments": []
+            },
+            {
+              "Keyword": "Then",
+              "NativeKeyword": "Then ",
+              "Name": "I select the peer group filter \"Banking\"",
+              "StepComments": [],
+              "AfterLastStepComments": []
+            }
+          ],
+          "Tags": [],
+          "Result": {
+            "WasExecuted": false,
+            "WasSuccessful": false,
+            "WasProvided": false
+          }
+        },
+        "Result": {
+          "WasExecuted": false,
+          "WasSuccessful": false,
+          "WasProvided": false
+        },
+        "Tags": []
+      },
+      "Result": {
+        "WasExecuted": false,
+        "WasSuccessful": false,
+        "WasProvided": false
+      }
+    },
+    {
+      "RelativeFolder": "Initial_Flow.feature",
       "Feature": {
         "Name": "Setup Wizard",
         "Description": "\"\"\"\r\nWith a system admin user, go into the Sales tab of the Sales Value app,\r\nthe setup flow should be displayed on the screen, click next, opt in to the terms and conditions and click next,\r\n opt into benchmarking and click next, click Let's Go\r\n\"\"\"",
@@ -830,6 +962,7 @@ jsonPWrapper ({
               }
             ],
             "Tags": [
+              "@ui",
               "@setup_wizard"
             ],
             "Result": {
@@ -878,6 +1011,7 @@ jsonPWrapper ({
               }
             ],
             "Tags": [
+              "@ui",
               "@setup_wizard"
             ],
             "Result": {
@@ -926,6 +1060,7 @@ jsonPWrapper ({
               }
             ],
             "Tags": [
+              "@ui",
               "@setup_wizard"
             ],
             "Result": {
@@ -988,6 +1123,7 @@ jsonPWrapper ({
               }
             ],
             "Tags": [
+              "@ui",
               "@smoke",
               "@setup_wizard"
             ],
@@ -1051,6 +1187,7 @@ jsonPWrapper ({
               }
             ],
             "Tags": [
+              "@ui",
               "@smoke",
               "@setup_wizard"
             ],
@@ -1073,23 +1210,182 @@ jsonPWrapper ({
         "WasSuccessful": false,
         "WasProvided": false
       }
+    },
+    {
+      "RelativeFolder": "Verify_Snapshots.feature",
+      "Feature": {
+        "Name": "Verify the snapshots after segment creation",
+        "Description": "",
+        "FeatureElements": [
+          {
+            "Name": "Happy path verify snapshots",
+            "Slug": "happy-path-verify-snapshots",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "I wait 10 min or until the snapshotobject is created",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "I navigate to the snapshot repository, looking in the filter for \"all\"",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "I verify that the snapshots have been created correctly",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [
+              "@checksnapshots",
+              "@ui"
+            ],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false,
+              "WasProvided": false
+            }
+          }
+        ],
+        "Background": {
+          "Name": "Create a segment, with the intention of creating snapshots",
+          "Description": "",
+          "Steps": [
+            {
+              "Keyword": "Given",
+              "NativeKeyword": "Given ",
+              "Name": "I successfully login in Salesforce using \"Admin\" credentials",
+              "StepComments": [],
+              "AfterLastStepComments": []
+            },
+            {
+              "Keyword": "And",
+              "NativeKeyword": "And ",
+              "Name": "I try to create a new segment with name: \"SqID\"",
+              "StepComments": [],
+              "AfterLastStepComments": []
+            },
+            {
+              "Keyword": "Then",
+              "NativeKeyword": "Then ",
+              "Name": "I create a new Opportunity filter setup according this table",
+              "TableArgument": {
+                "HeaderRow": [
+                  "Amount",
+                  "Field",
+                  "Operator",
+                  "Value",
+                  "Continue"
+                ],
+                "DataRows": [
+                  [
+                    "Annual Revenue",
+                    "Type",
+                    "contains",
+                    "New Business",
+                    "yes"
+                  ]
+                ]
+              },
+              "StepComments": [],
+              "AfterLastStepComments": []
+            },
+            {
+              "Keyword": "And",
+              "NativeKeyword": "And ",
+              "Name": "I create a new Sales filter setup according this table",
+              "TableArgument": {
+                "HeaderRow": [
+                  "Field",
+                  "Operator",
+                  "Value",
+                  "Continue"
+                ],
+                "DataRows": [
+                  [
+                    "Country",
+                    "contains",
+                    "US",
+                    "yes"
+                  ]
+                ]
+              },
+              "StepComments": [],
+              "AfterLastStepComments": []
+            },
+            {
+              "Keyword": "Then",
+              "NativeKeyword": "Then ",
+              "Name": "I select the peer group filter \"Banking\"",
+              "StepComments": [],
+              "AfterLastStepComments": []
+            }
+          ],
+          "Tags": [],
+          "Result": {
+            "WasExecuted": false,
+            "WasSuccessful": false,
+            "WasProvided": false
+          }
+        },
+        "Result": {
+          "WasExecuted": false,
+          "WasSuccessful": false,
+          "WasProvided": false
+        },
+        "Tags": []
+      },
+      "Result": {
+        "WasExecuted": false,
+        "WasSuccessful": false,
+        "WasProvided": false
+      }
     }
   ],
   "Summary": {
     "Tags": [
       {
         "Tag": "@ui",
-        "Total": 7,
+        "Total": 14,
         "Passing": 0,
         "Failing": 0,
-        "Inconclusive": 7
+        "Inconclusive": 14
       },
       {
         "Tag": "@smoke",
-        "Total": 3,
+        "Total": 4,
         "Passing": 0,
         "Failing": 0,
-        "Inconclusive": 3
+        "Inconclusive": 4
+      },
+      {
+        "Tag": "@newsegment",
+        "Total": 6,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 6
+      },
+      {
+        "Tag": "@customsettings",
+        "Total": 1,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 1
+      },
+      {
+        "Tag": "@delete_segments",
+        "Total": 1,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 1
       },
       {
         "Tag": "@setup_wizard",
@@ -1097,20 +1393,83 @@ jsonPWrapper ({
         "Passing": 0,
         "Failing": 0,
         "Inconclusive": 5
+      },
+      {
+        "Tag": "@checksnapshots",
+        "Total": 1,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 1
       }
     ],
     "Folders": [
       {
-        "Folder": "features",
-        "Total": 15,
+        "Folder": "Create_Segment.feature",
+        "Total": 9,
         "Passing": 0,
         "Failing": 0,
-        "Inconclusive": 15
+        "Inconclusive": 9
+      },
+      {
+        "Folder": "Settings.feature",
+        "Total": 1,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 1
+      },
+      {
+        "Folder": "Delete_Segment.feature",
+        "Total": 1,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 1
+      },
+      {
+        "Folder": "Initial_Flow.feature",
+        "Total": 5,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 5
+      },
+      {
+        "Folder": "Verify_Snapshots.feature",
+        "Total": 1,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 1
       }
     ],
     "NotTestedFolders": [
       {
-        "Folder": "features",
+        "Folder": "Create_Segment.feature",
+        "Total": 0,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 0
+      },
+      {
+        "Folder": "Settings.feature",
+        "Total": 0,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 0
+      },
+      {
+        "Folder": "Delete_Segment.feature",
+        "Total": 0,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 0
+      },
+      {
+        "Folder": "Initial_Flow.feature",
+        "Total": 0,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 0
+      },
+      {
+        "Folder": "Verify_Snapshots.feature",
         "Total": 0,
         "Passing": 0,
         "Failing": 0,
@@ -1118,21 +1477,21 @@ jsonPWrapper ({
       }
     ],
     "Scenarios": {
-      "Total": 15,
+      "Total": 17,
       "Passing": 0,
       "Failing": 0,
-      "Inconclusive": 15
+      "Inconclusive": 17
     },
     "Features": {
-      "Total": 3,
+      "Total": 5,
       "Passing": 0,
       "Failing": 0,
-      "Inconclusive": 3
+      "Inconclusive": 5
     }
   },
   "Configuration": {
     "SutName": "Sales Value App",
     "SutVersion": "1",
-    "GeneratedOn": "25 junio 2020 15:38:42"
+    "GeneratedOn": "21 julio 2020 13:18:50"
   }
 });

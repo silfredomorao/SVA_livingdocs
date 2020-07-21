@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"[]>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Custom settings</title>
+    <link rel="stylesheet" href="css/master.css" type="text/css" />
+    <link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/scripts.js" type="text/javascript"></script>
+    <script type="text/javascript">
+$(document).ready(function() {
+  initializeToc();
+});
+</script>
+    <!-- We are using Font Awesome - http://fortawesome.github.com/Font-Awesome - licensed under CC BY 3.0 -->
+  </head>
+  <body>
+    <div id="container">
+      <div id="top" />
+      <div id="toc">
+        <p class="tocCollapser" title="Collapse Table of Content">«</p>
+        <ul class="features">
+          <li class="file" id="root">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="file">
+            <a href="Create_Segment.html">Create a New Segment</a>
+          </li>
+          <li class="file">
+            <span class="current">Custom settings</span>
+          </li>
+          <li class="file">
+            <a href="Delete_Segment.html">Delete segments test scenarios</a>
+          </li>
+          <li class="file">
+            <a href="Initial_Flow.html">Setup Wizard</a>
+          </li>
+          <li class="file">
+            <a href="Verify_Snapshots.html">Verify the snapshots after segment creation</a>
+          </li>
+        </ul>
+      </div>
+      <div id="feature">
+        <h1>Custom settings</h1>
+        <div class="description">
+          <p>All the custom settings test scenarios</p>
+        </div>
+        <ul id="scenarios">
+          <li class="scenario">
+            <div class="scenario-heading" id="happy-path-checking-the-custom-settings">
+              <p class="tags">Tags: <span>@customsettings</span>, <span>@smoke</span>, <span>@ui</span></p>
+              <h2>Happy path, checking the custom settings</h2>
+            </div>
+            <div class="steps">
+              <ul>
+                <li class="step">
+                  <span class="keyword">Given </span>I successfully login in Salesforce using "Admin" credentials</li>
+                <li class="step">
+                  <span class="keyword">And </span>navigate into Custom Settings</li>
+                <li class="step">
+                  <span class="keyword">Then </span>I validate verify the app configuration is according to this table<div class="table_container"><table class="datatable"><thead><tr><th>Name</th><th>Allow Benchmarking</th><th>Async Reports</th><th>Cron Benchmark</th><th>Cron Send Snapshot</th><th>Cron Snapshot Job</th><th>Opt In</th><th>Regression Formula</th><th> </th></tr></thead><tbody><tr><td>AppSettings</td><td>yes</td><td>yes</td><td>0 0 0 5 * ?</td><td>0 0 0 * * ?</td><td>0 0 0 1 * ?</td><td>yes</td><td>yes</td></tr></tbody></table></div></li>
+              </ul>
+            </div>
+            <a class="scenario-link" href="javascript:showImageLink('happy-path-checking-the-custom-settings')" title="Copy scenario link to clipboard.">
+              <i class="icon-link"> </i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div id="footer">
+        <p>Test results generated for: Sales Value App, version 1</p>
+        <p>Generated on: 21 julio 2020 13:18:49</p>
+        <p>Produced by Pickles, version 2.20.1.0</p>
+      </div>
+    </div>
+  </body>
+</html>
