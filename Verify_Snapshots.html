@@ -36,6 +36,12 @@ $(document).ready(function() {
             <a href="Initial_Flow.html">Setup Wizard</a>
           </li>
           <li class="file">
+            <a href="Verify_Segment.html">Verify that the segment is created as expected and the values of kpi</a>
+          </li>
+          <li class="file">
+            <a href="Verify_Actions_plans.html">Verify the Actions plans</a>
+          </li>
+          <li class="file">
             <span class="current">Verify the snapshots after segment creation</span>
           </li>
         </ul>
@@ -70,6 +76,7 @@ $(document).ready(function() {
             <div class="steps">
               <ul>
                 <li class="step">
+                  <span class="comment">#Given I successfully login in Salesforce using "Admin" credentials</span>
                   <span class="keyword">And </span>I wait 10 min or until the snapshotobject is created</li>
                 <li class="step">
                   <span class="keyword">When </span>I navigate to the snapshot repository, looking in the filter for "all"</li>
@@ -81,11 +88,31 @@ $(document).ready(function() {
               <i class="icon-link"> </i>
             </a>
           </li>
+          <li class="scenario">
+            <div class="scenario-heading" id="happy-path-verify-snapshots">
+              <p class="tags">Tags: <span>@checksnapshots</span>, <span>@ui</span></p>
+              <h2>Happy path verify snapshots</h2>
+            </div>
+            <div class="steps">
+              <ul>
+                <li class="step">
+                  <span class="comment"># Given I successfully login in Salesforce using "Admin" credentials</span>
+                  <span class="keyword">And </span>I wait 10 min or until the snapshotobject is created</li>
+                <li class="step">
+                  <span class="keyword">When </span>I navigate to the snapshot repository, looking in the filter for "all"</li>
+                <li class="step">
+                  <span class="keyword">Then </span>I verify that the latest snapshot have the right KPI values</li>
+              </ul>
+            </div>
+            <a class="scenario-link" href="javascript:showImageLink('happy-path-verify-snapshots')" title="Copy scenario link to clipboard.">
+              <i class="icon-link"> </i>
+            </a>
+          </li>
         </ul>
       </div>
       <div id="footer">
         <p>Test results generated for: Sales Value App, version 1</p>
-        <p>Generated on: 21 julio 2020 13:18:49</p>
+        <p>Generated on: 5 agosto 2020 17:35:25</p>
         <p>Produced by Pickles, version 2.20.1.0</p>
       </div>
     </div>

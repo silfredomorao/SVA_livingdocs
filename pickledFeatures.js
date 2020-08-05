@@ -755,8 +755,8 @@ jsonPWrapper ({
                       "AppSettings",
                       "yes",
                       "yes",
-                      "0 0 0 5 * ?",
-                      "0 0 0 * * ?",
+                      "0 30 * * * ?",
+                      "0 28 * * * ?",
                       "0 0 0 1 * ?",
                       "yes",
                       "yes"
@@ -1212,6 +1212,274 @@ jsonPWrapper ({
       }
     },
     {
+      "RelativeFolder": "Verify_Segment.feature",
+      "Feature": {
+        "Name": "Verify that the segment is created as expected and the values of kpi",
+        "Description": "",
+        "FeatureElements": [
+          {
+            "Name": "Happy path verify segment",
+            "Slug": "happy-path-verify-segment",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "Given",
+                "NativeKeyword": "Given ",
+                "Name": "I successfully login in Salesforce using \"Admin\" credentials",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "I try to create a new segment with name: \"SqID\"",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "I create a new Opportunity filter setup according this table",
+                "TableArgument": {
+                  "HeaderRow": [
+                    "Amount",
+                    "Field",
+                    "Operator",
+                    "Value",
+                    "Continue"
+                  ],
+                  "DataRows": [
+                    [
+                      "Amount",
+                      "Type",
+                      "equals",
+                      "",
+                      "yes"
+                    ]
+                  ]
+                },
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "I create a new Sales filter setup according this table",
+                "TableArgument": {
+                  "HeaderRow": [
+                    "Field",
+                    "Operator",
+                    "Value",
+                    "Continue"
+                  ],
+                  "DataRows": [
+                    [
+                      "Country",
+                      "contains",
+                      "",
+                      "yes"
+                    ]
+                  ]
+                },
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "I select the peer group filter \"Banking\"",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "I wait 10 min or until the snapshotobject is created",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "I verify the segment is created properly according the creation scenario",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [
+              "@checksegment",
+              "@ui"
+            ],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false,
+              "WasProvided": false
+            }
+          }
+        ],
+        "Result": {
+          "WasExecuted": false,
+          "WasSuccessful": false,
+          "WasProvided": false
+        },
+        "Tags": []
+      },
+      "Result": {
+        "WasExecuted": false,
+        "WasSuccessful": false,
+        "WasProvided": false
+      }
+    },
+    {
+      "RelativeFolder": "Verify_Actions_plans.feature",
+      "Feature": {
+        "Name": "Verify the Actions plans",
+        "Description": "",
+        "FeatureElements": [
+          {
+            "Name": "Happy path verify actions plans",
+            "Slug": "happy-path-verify-actions-plans",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "Given",
+                "NativeKeyword": "Given ",
+                "Name": "I successfully login in Salesforce using \"Admin\" credentials",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "I try to create a new segment with name: \"SqID\"",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "I create a new Opportunity filter setup according this table",
+                "TableArgument": {
+                  "HeaderRow": [
+                    "Amount",
+                    "Field",
+                    "Operator",
+                    "Value",
+                    "Continue"
+                  ],
+                  "DataRows": [
+                    [
+                      "Amount",
+                      "Type",
+                      "equals",
+                      "",
+                      "yes"
+                    ]
+                  ]
+                },
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "I create a new Sales filter setup according this table",
+                "TableArgument": {
+                  "HeaderRow": [
+                    "Field",
+                    "Operator",
+                    "Value",
+                    "Continue"
+                  ],
+                  "DataRows": [
+                    [
+                      "Country",
+                      "contains",
+                      "",
+                      "yes"
+                    ]
+                  ]
+                },
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "I select the peer group filter \"Banking\"",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "I wait 10 min or until the snapshotobject is created",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "I verify the actions plan is present",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "I change the status of the action plan:",
+                "TableArgument": {
+                  "HeaderRow": [
+                    "KPI",
+                    "New status"
+                  ],
+                  "DataRows": [
+                    [
+                      "Won Opportunities",
+                      "In Progress"
+                    ]
+                  ]
+                },
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "now I iterate to the status selector checking the status change",
+                "StepComments": [
+                  {
+                    "Text": "#| Average Sales Size | Dismiss       |"
+                  }
+                ],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [
+              "@actionplan",
+              "@ui"
+            ],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false,
+              "WasProvided": false
+            }
+          }
+        ],
+        "Result": {
+          "WasExecuted": false,
+          "WasSuccessful": false,
+          "WasProvided": false
+        },
+        "Tags": []
+      },
+      "Result": {
+        "WasExecuted": false,
+        "WasSuccessful": false,
+        "WasProvided": false
+      }
+    },
+    {
       "RelativeFolder": "Verify_Snapshots.feature",
       "Feature": {
         "Name": "Verify the snapshots after segment creation",
@@ -1226,7 +1494,11 @@ jsonPWrapper ({
                 "Keyword": "And",
                 "NativeKeyword": "And ",
                 "Name": "I wait 10 min or until the snapshotobject is created",
-                "StepComments": [],
+                "StepComments": [
+                  {
+                    "Text": "#Given I successfully login in Salesforce using \"Admin\" credentials"
+                  }
+                ],
                 "AfterLastStepComments": []
               },
               {
@@ -1240,6 +1512,47 @@ jsonPWrapper ({
                 "Keyword": "Then",
                 "NativeKeyword": "Then ",
                 "Name": "I verify that the snapshots have been created correctly",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [
+              "@checksnapshots",
+              "@ui"
+            ],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false,
+              "WasProvided": false
+            }
+          },
+          {
+            "Name": "Happy path verify snapshots",
+            "Slug": "happy-path-verify-snapshots",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "I wait 10 min or until the snapshotobject is created",
+                "StepComments": [
+                  {
+                    "Text": "# Given I successfully login in Salesforce using \"Admin\" credentials"
+                  }
+                ],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "I navigate to the snapshot repository, looking in the filter for \"all\"",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "I verify that the latest snapshot have the right KPI values",
                 "StepComments": [],
                 "AfterLastStepComments": []
               }
@@ -1354,10 +1667,10 @@ jsonPWrapper ({
     "Tags": [
       {
         "Tag": "@ui",
-        "Total": 14,
+        "Total": 17,
         "Passing": 0,
         "Failing": 0,
-        "Inconclusive": 14
+        "Inconclusive": 17
       },
       {
         "Tag": "@smoke",
@@ -1395,11 +1708,25 @@ jsonPWrapper ({
         "Inconclusive": 5
       },
       {
-        "Tag": "@checksnapshots",
+        "Tag": "@checksegment",
         "Total": 1,
         "Passing": 0,
         "Failing": 0,
         "Inconclusive": 1
+      },
+      {
+        "Tag": "@actionplan",
+        "Total": 1,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 1
+      },
+      {
+        "Tag": "@checksnapshots",
+        "Total": 2,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 2
       }
     ],
     "Folders": [
@@ -1432,11 +1759,25 @@ jsonPWrapper ({
         "Inconclusive": 5
       },
       {
-        "Folder": "Verify_Snapshots.feature",
+        "Folder": "Verify_Segment.feature",
         "Total": 1,
         "Passing": 0,
         "Failing": 0,
         "Inconclusive": 1
+      },
+      {
+        "Folder": "Verify_Actions_plans.feature",
+        "Total": 1,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 1
+      },
+      {
+        "Folder": "Verify_Snapshots.feature",
+        "Total": 2,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 2
       }
     ],
     "NotTestedFolders": [
@@ -1469,6 +1810,20 @@ jsonPWrapper ({
         "Inconclusive": 0
       },
       {
+        "Folder": "Verify_Segment.feature",
+        "Total": 0,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 0
+      },
+      {
+        "Folder": "Verify_Actions_plans.feature",
+        "Total": 0,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 0
+      },
+      {
         "Folder": "Verify_Snapshots.feature",
         "Total": 0,
         "Passing": 0,
@@ -1477,21 +1832,21 @@ jsonPWrapper ({
       }
     ],
     "Scenarios": {
-      "Total": 17,
+      "Total": 20,
       "Passing": 0,
       "Failing": 0,
-      "Inconclusive": 17
+      "Inconclusive": 20
     },
     "Features": {
-      "Total": 5,
+      "Total": 7,
       "Passing": 0,
       "Failing": 0,
-      "Inconclusive": 5
+      "Inconclusive": 7
     }
   },
   "Configuration": {
     "SutName": "Sales Value App",
     "SutVersion": "1",
-    "GeneratedOn": "21 julio 2020 13:18:50"
+    "GeneratedOn": "5 agosto 2020 17:35:26"
   }
 });

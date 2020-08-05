@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"[]>
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title>Custom settings</title>
+    <title>Verify that the segment is created as expected and the values of kpi</title>
     <link rel="stylesheet" href="css/master.css" type="text/css" />
     <link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
     <script src="js/jquery.js" type="text/javascript"></script>
@@ -27,7 +27,7 @@ $(document).ready(function() {
             <a href="Create_Segment.html">Create a New Segment</a>
           </li>
           <li class="file">
-            <span class="current">Custom settings</span>
+            <a href="Settings.html">Custom settings</a>
           </li>
           <li class="file">
             <a href="Delete_Segment.html">Delete segments test scenarios</a>
@@ -36,7 +36,7 @@ $(document).ready(function() {
             <a href="Initial_Flow.html">Setup Wizard</a>
           </li>
           <li class="file">
-            <a href="Verify_Segment.html">Verify that the segment is created as expected and the values of kpi</a>
+            <span class="current">Verify that the segment is created as expected and the values of kpi</span>
           </li>
           <li class="file">
             <a href="Verify_Actions_plans.html">Verify the Actions plans</a>
@@ -47,27 +47,32 @@ $(document).ready(function() {
         </ul>
       </div>
       <div id="feature">
-        <h1>Custom settings</h1>
-        <div class="description">
-          <p>All the custom settings test scenarios</p>
-        </div>
+        <h1>Verify that the segment is created as expected and the values of kpi</h1>
         <ul id="scenarios">
           <li class="scenario">
-            <div class="scenario-heading" id="happy-path-checking-the-custom-settings">
-              <p class="tags">Tags: <span>@customsettings</span>, <span>@smoke</span>, <span>@ui</span></p>
-              <h2>Happy path, checking the custom settings</h2>
+            <div class="scenario-heading" id="happy-path-verify-segment">
+              <p class="tags">Tags: <span>@checksegment</span>, <span>@ui</span></p>
+              <h2>Happy path verify segment</h2>
             </div>
             <div class="steps">
               <ul>
                 <li class="step">
                   <span class="keyword">Given </span>I successfully login in Salesforce using "Admin" credentials</li>
                 <li class="step">
-                  <span class="keyword">And </span>navigate into Custom Settings</li>
+                  <span class="keyword">And </span>I try to create a new segment with name: "SqID"</li>
                 <li class="step">
-                  <span class="keyword">Then </span>I validate verify the app configuration is according to this table<div class="table_container"><table class="datatable"><thead><tr><th>Name</th><th>Allow Benchmarking</th><th>Async Reports</th><th>Cron Benchmark</th><th>Cron Send Snapshot</th><th>Cron Snapshot Job</th><th>Opt In</th><th>Regression Formula</th><th> </th></tr></thead><tbody><tr><td>AppSettings</td><td>yes</td><td>yes</td><td>0 30 * * * ?</td><td>0 28 * * * ?</td><td>0 0 0 1 * ?</td><td>yes</td><td>yes</td></tr></tbody></table></div></li>
+                  <span class="keyword">Then </span>I create a new Opportunity filter setup according this table<div class="table_container"><table class="datatable"><thead><tr><th>Amount</th><th>Field</th><th>Operator</th><th>Value</th><th>Continue</th><th> </th></tr></thead><tbody><tr><td>Amount</td><td>Type</td><td>equals</td><td></td><td>yes</td></tr></tbody></table></div></li>
+                <li class="step">
+                  <span class="keyword">And </span>I create a new Sales filter setup according this table<div class="table_container"><table class="datatable"><thead><tr><th>Field</th><th>Operator</th><th>Value</th><th>Continue</th><th> </th></tr></thead><tbody><tr><td>Country</td><td>contains</td><td></td><td>yes</td></tr></tbody></table></div></li>
+                <li class="step">
+                  <span class="keyword">Then </span>I select the peer group filter "Banking"</li>
+                <li class="step">
+                  <span class="keyword">And </span>I wait 10 min or until the snapshotobject is created</li>
+                <li class="step">
+                  <span class="keyword">Then </span>I verify the segment is created properly according the creation scenario</li>
               </ul>
             </div>
-            <a class="scenario-link" href="javascript:showImageLink('happy-path-checking-the-custom-settings')" title="Copy scenario link to clipboard.">
+            <a class="scenario-link" href="javascript:showImageLink('happy-path-verify-segment')" title="Copy scenario link to clipboard.">
               <i class="icon-link"> </i>
             </a>
           </li>
